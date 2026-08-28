@@ -25,6 +25,9 @@
 """
 
 def is_palindrome(s):
+    s = [c.lower() for c in s if c.isalnum()]
+    return s == s[::-1]
+        
     """
     문자열이 회문인지 판별하는 함수
     
