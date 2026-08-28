@@ -42,6 +42,14 @@ def rotate_matrix_90(matrix):
         회전된 2차원 리스트
     """
     n = len(matrix)
+    ret = [[0]* n for _ in (range(n))]
+
+    for r in range(n):
+        for c in range(n):
+            ret[c][n-1-r] = matrix[r][c]
+    return ret
+
+        
     
     # TODO: n x n 크기의 새로운 배열을 생성하세요 (0으로 초기화)
     pass
