@@ -33,6 +33,11 @@ def bubble_sort(arr):
         정렬된 배열
     """
     n = len(arr)
+    for i in range(n-1):
+        for j in range(0 , n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                
     
     # TODO: 외부 반복문 - n-1번 반복
     # 각 패스마다 가장 큰 원소가 끝으로 이동
