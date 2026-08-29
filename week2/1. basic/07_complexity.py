@@ -30,7 +30,11 @@ def find_duplicates_brute_force(nums):
     """
     duplicates = []
     n = len(nums)
-    
+    for i in range(n-1):
+        for j in range(i+1 , n):
+            if nums[i] == nums[j]:
+                if nums[i] not in duplicates:
+                    duplicates.append(nums[i])
     # TODO: 이중 반복문으로 중복 찾기
     ## i번째 원소와 i+1 이후의 모든 원소를 비교
     ## 같은 원소를 찾으면 duplicates에 추가 (중복 추가 방지 필요)
@@ -46,11 +50,16 @@ def find_duplicates_sorting(nums):
     """
     if not nums:
         return []
-    
+    nums.sort()
     # TODO: 배열을 정렬하세요 (nums.sort() 사용)
     pass
     
     duplicates = []
+    n = len(nums)
+    for i in range(n-1):
+        if nums[i] == nums[i+1]:
+            if nums[i] not in duplicates:
+                duplicates.append(nums[i])
     
     # TODO: 인접한 원소를 비교하여 중복 찾기
     # i와 i+1 원소가 같고, duplicates에 없으면 추가
@@ -66,6 +75,11 @@ def find_duplicates_hash(nums):
     """
     seen = set()
     duplicates = set()
+    for i in nums:
+        if i in seen:
+            duplicates.add(i)
+        elif i not in seen:
+            seen.add(i)
     
     # TODO: 각 원소를 순회하면서
     ## 이미 seen에 있으면 duplicates에 추가
@@ -84,7 +98,7 @@ def measure_time(func, nums, method_name):
 if __name__ == "__main__":
     # 테스트 케이스 1: 작은 배열
     print("=== 테스트 케이스 1: 작은 배열 ===")
-    nums1 = [4, 3, 2, 7, 8, 2, 3, 1]
+    nums1 = [4, 3, 2, 7, 8, 2, 3, 1 , 3 ,3]
     print(f"입력: {nums1}\n")
     
     result1 = find_duplicates_brute_force(nums1)
