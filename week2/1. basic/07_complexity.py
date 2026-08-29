@@ -98,7 +98,7 @@ def measure_time(func, nums, method_name):
 if __name__ == "__main__":
     # 테스트 케이스 1: 작은 배열
     print("=== 테스트 케이스 1: 작은 배열 ===")
-    nums1 = [4, 3, 2, 7, 8, 2, 3, 1 , 3 ,3]
+    nums1 = [4, 3, 2, 7, 8, 2, 3, 1]
     print(f"입력: {nums1}\n")
     
     result1 = find_duplicates_brute_force(nums1)
