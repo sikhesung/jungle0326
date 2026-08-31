@@ -41,7 +41,9 @@ def process_print_queue(jobs):
     
     processed = []
     for i in range(len(jobs)):
+        
         a = queue.popleft()
+        print("처리: " +  a)
         processed.append(a)
 
     # TODO: 큐가 비어있지 않은 동안 반복
