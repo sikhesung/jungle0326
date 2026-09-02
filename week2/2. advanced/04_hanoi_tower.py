@@ -81,7 +81,7 @@ def hanoi_moves(n: int) -> list:
         if k == 0:
             return
         move(k - 1, src, dst, via)
-        result.append((src, dst))
+        result.append((src, dst)) 
         move(k - 1, via, src, dst)
     move(n, 1, 2, 3)
     return result
