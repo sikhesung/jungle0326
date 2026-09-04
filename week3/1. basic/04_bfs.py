@@ -43,8 +43,12 @@ def bfs(graph, start):
     Returns:
         방문 순서 리스트
     """
+    queue = deque (graph)
     visited = []
-    
+    while queue:
+        start = queue.popleft()
+        if start not in visited:
+            visited.append(start)
     # TODO: 큐 생성 및 시작 정점 추가
     ## 방문한 정점 집합
     pass
