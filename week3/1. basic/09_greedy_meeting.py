@@ -24,7 +24,7 @@
 
 
 def select_meetings(meetings):
-    """
+    """ 
     회의실 배정 (그리디)
     
     Args:
