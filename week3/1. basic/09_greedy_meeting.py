@@ -27,15 +27,15 @@ def select_meetings(meetings):
     """ 
     회의실 배정 (그리디)
     
-    Args:
+    Args: 
         meetings: [(시작, 종료)] 리스트
     
     Returns:
-        (배정된 회의 개수, 선택된 회의 리스트)
-    """
+        (배정된 회의 개수, 선택된 회의 리스트) 
+    """ 
     # TODO: 회의가 없으면 0 반환
     if meetings is None:
-        return 0
+        return  0
     pass
     
     # TODO: 종료 시간 기준으로 정렬
